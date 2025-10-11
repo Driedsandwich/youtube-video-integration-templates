@@ -1,79 +1,68 @@
-# 動画統合テンプレート集
+# YouTube動画統合テンプレート
 
-> YouTube動画の内容をプロジェクトに統合するための標準プロンプト・テンプレート
-
-## 📚 概要
-
-技術系YouTube動画から得られる知見を、プロジェクトに体系的に統合するためのテンプレート集です。AI Agent（Cursor等）に渡すことで、自動的にドキュメント作成・ルール追加・設定ファイル更新を実施できます。
+> 技術系YouTube動画の内容をプロジェクトに自動統合するための再利用可能なプロンプト集
 
 ---
 
-## 🎯 使用シーン
+## 🚀 基本プロンプト（推奨）
 
-### こんな時に使える
-
-- ✅ 技術入門動画の内容をプロジェクトに取り込みたい
-- ✅ ベストプラクティスをチーム全体に浸透させたい
-- ✅ 非エンジニアメンバー向けのガイドを作りたい
-- ✅ AI駆動開発のルールを強化したい
-- ✅ セキュリティ・CI/CD等の運用を標準化したい
-
----
-
-## 📁 テンプレート一覧
-
-### 1. 詳細版テンプレート（推奨）
-
-**ファイル**: [`video-integration-prompt-template.md`](./video-integration-prompt-template.md)
-
-**用途**: 初回統合、複雑なプロジェクト、詳細な制約がある場合
-
-### 2. 超高速テンプレート（最速）
-
-**ファイル**: [`video-integration-ultra-quick.md`](./video-integration-ultra-quick.md)
-
-**用途**: 30秒で即実行、最小限の設定
-
-### 3. パターン別テンプレート
-
-**ファイル**: [`video-integration-quick-reference.md`](./video-integration-quick-reference.md)
-
-**用途**: 用途別の最適化されたテンプレート
-
-### 4. 構造化プロンプト（上級者向け）
-
-**ファイル**: [`video-integration-structured-prompt.json`](./video-integration-structured-prompt.json)
-
-**用途**: バッチ処理、CI/CD統合、プログラマティックな操作
-
----
-
-## 🚀 クイックスタート
+最もシンプルで実用的。**これだけで十分使えます。**
 
 ```markdown
-@[動画URL] この動画の内容をプロジェクトに統合してください。
+@[YouTube動画URL] この動画の内容をプロジェクトに統合してください。
 
-以下の手順で進めてください：
-1. トランスクリプトを取得して内容を分析
-2. プロジェクト構造を把握
-3. TODOリストを作成して段階的に実装
-4. ガイド、ルール、設定ファイル、READMEを作成/更新
-5. 完了報告
+## 統合方針
+1. 動画のトランスクリプトを取得・分析
+2. プロジェクト構造を把握（docs/, .cursor/rules/, README.md）
+3. TODOリストを作成
+4. 以下を段階的に作成/更新:
+   - 初心者向けガイド（docs/配下）
+   - Cursorルール（.cursor/rules/配下）
+   - 設定ファイル（.gitignore, .env.example等、必要に応じて）
+   - 統合運用ガイドへのセクション追加（必要に応じて）
+   - PRテンプレート改善（必要に応じて）
+   - README（新規ドキュメントへのリンク）
+5. 完了報告（作成ファイル、メリット、次のステップ）
+
+## 制約
+- 既存の命名規則・スタイルに従う
+- 機密情報（APIキー等）を絶対に含めない
+- 日本語で記述
+- 既存ドキュメントとの整合性を保つ
 ```
 
----
-
-## 📊 実績データ
-
-### Git/GitHub統合の事例
-
-**元動画**: [非エンジニアのためのGit+GitHub入門](https://youtu.be/Uml3jEPWIKo)
-
-**効果**:
-- 非エンジニアメンバーのGit習得時間が80%削減
-- APIキー漏洩リスクをルール化で防止
-- チーム全体でブランチ戦略が統一
+**使い方**: `[YouTube動画URL]`を実際のURLに置き換えて、Cursor Agentで実行
 
 ---
 
-**AI駆動開発の知見を、プロジェクトの資産に。**
+## 📁 その他のテンプレート（オプション）
+
+| ファイル | 用途 |
+|---------|------|
+| [ultra-quick.md](video-integration-ultra-quick.md) | パターン特化版（Git/Docker/セキュリティ） |
+| [quick-reference.md](video-integration-quick-reference.md) | 5パターン+トラブルシューティング |
+| [prompt-template.md](video-integration-prompt-template.md) | 完全カスタマイズ版 |
+| [structured-prompt.json](video-integration-structured-prompt.json) | JSON形式・自動化 |
+
+---
+
+## 📊 実績
+
+**事例**: Git/GitHub統合（[元動画](https://youtu.be/Uml3jEPWIKo)）
+- 所要時間: 約45分
+- 作成物: 5ファイル
+- 効果: Git習得時間が80%削減
+
+---
+
+## 🤝 改善案・PR歓迎
+
+- 新しいパターンの提案
+- プロンプトの精度向上
+- 実践事例の共有
+
+[Issues](https://github.com/Driedsandwich/youtube-video-integration-templates/issues) / [PRを送る](https://github.com/Driedsandwich/youtube-video-integration-templates/pulls)
+
+---
+
+**シンプルに、再利用可能に。**
