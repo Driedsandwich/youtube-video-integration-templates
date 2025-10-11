@@ -28,13 +28,19 @@
 
 **用途**: 初回統合、複雑なプロジェクト、詳細な制約がある場合
 
-### 2. クイックリファレンス（最速）
+### 2. 超高速テンプレート（最速）
+
+**ファイル**: [`video-integration-ultra-quick.md`](./video-integration-ultra-quick.md)
+
+**用途**: 30秒で即実行、最小限の設定
+
+### 3. パターン別テンプレート
 
 **ファイル**: [`video-integration-quick-reference.md`](./video-integration-quick-reference.md)
 
-**用途**: すぐに結果が欲しい、定型パターンの繰り返し
+**用途**: 用途別の最適化されたテンプレート
 
-### 3. 構造化プロンプト（上級者向け）
+### 4. 構造化プロンプト（上級者向け）
 
 **ファイル**: [`video-integration-structured-prompt.json`](./video-integration-structured-prompt.json)
 

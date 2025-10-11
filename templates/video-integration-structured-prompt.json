@@ -23,8 +23,12 @@
         },
         "type": {
           "type": "string",
-          "enum": ["web-app", "cli-tool", "library", "api-service", "documentation", "other"],
+          "enum": ["web-app", "cli-tool", "library", "api-service", "documentation"],
           "description": "プロジェクトタイプ"
+        },
+        "customType": {
+          "type": "string",
+          "description": "カスタムプロジェクトタイプ（標準enum以外の場合）"
         },
         "techStack": {
           "type": "array",
