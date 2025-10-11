@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "YouTube Video Integration Task",
+  "description": "AI Agent向けの構造化された動画統合タスク定義",
+  "type": "object",
+  "required": ["videoUrl", "projectContext", "integrationGoal"],
+  "properties": {
+    "videoUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "統合するYouTube動画のURL",
+      "example": "https://youtu.be/Uml3jEPWIKo"
+    },
+    "projectContext": {
+      "type": "object",
+      "description": "プロジェクトの基本情報",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "プロジェクト名",
+          "example": "PIMS"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["web-app", "cli-tool", "library", "api-service", "documentation", "other"],
+          "description": "プロジェクトタイプ"
+        },
+        "techStack": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "使用している技術スタック",
+          "example": ["Python", "Node.js", "GitHub Actions", "Notion API"]
+        },
+        "targetAudience": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["beginner", "intermediate", "advanced", "non-engineer"]
+          },
+          "description": "対象ユーザー層"
+        }
+      }
+    },
+    "integrationGoal": {
+      "type": "object",
+      "description": "統合の目的と範囲",
+      "required": ["purpose"],
+      "properties": {
+        "purpose": {
+          "type": "string",
+          "description": "この統合で達成したいこと",
+          "example": "AI駆動開発における安全なGit運用を確立"
+        },
+        "targetUsers": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "この統合の主な対象ユーザー",
+          "example": ["非エンジニア", "AIツール初心者"]
+        },
+        "keyTopics": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "重点的に扱うトピック",
+          "example": ["バージョン管理", "ブランチ戦略", "機密情報管理"]
+        }
+      }
+    },
+    "deliverables": {
+      "type": "object",
+      "description": "期待する成果物",
+      "properties": {
+        "beginnerGuide": {"type": "boolean", "default": true},
+        "cursorRules": {"type": "boolean", "default": true},
+        "configFiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [".gitignore", ".env.example", ".dockerignore", "Dockerfile", "docker-compose.yml", "other"]
+          }
+        },
+        "extendExistingDocs": {"type": "boolean", "default": true},
+        "updateReadme": {"type": "boolean", "default": true}
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "description": "制約条件",
+      "properties": {
+        "fileNamingConvention": {
+          "type": "string",
+          "enum": ["kebab-case", "snake_case", "camelCase"],
+          "default": "kebab-case"
+        },
+        "language": {"type": "string", "enum": ["ja", "en"], "default": "ja"},
+        "useEmoji": {"type": "boolean", "default": true}
+      }
+    }
+  },
+  "examples": [
+    {
+      "videoUrl": "https://youtu.be/Uml3jEPWIKo",
+      "projectContext": {
+        "name": "PIMS",
+        "type": "web-app",
+        "techStack": ["Python", "Node.js", "GitHub Actions", "Notion API"],
+        "targetAudience": ["beginner", "non-engineer"]
+      },
+      "integrationGoal": {
+        "purpose": "AI駆動開発における安全なGit運用を確立",
+        "targetUsers": ["非エンジニア", "AIツール初心者"],
+        "keyTopics": ["バージョン管理", "ブランチ戦略", "機密情報管理"]
+      },
+      "deliverables": {
+        "beginnerGuide": true,
+        "cursorRules": true,
+        "configFiles": [".gitignore", ".env.example"],
+        "extendExistingDocs": true,
+        "updateReadme": true
+      },
+      "constraints": {
+        "fileNamingConvention": "kebab-case",
+        "language": "ja",
+        "useEmoji": true
+      }
+    }
+  ]
+}
