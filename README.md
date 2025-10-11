@@ -60,20 +60,33 @@
 
 ---
 
-### 2. クイックリファレンス（最速）
+### 2. 超高速テンプレート（最速）
 
-**ファイル**: [templates/video-integration-quick-reference.md](templates/video-integration-quick-reference.md)
+**ファイル**: [templates/video-integration-ultra-quick.md](templates/video-integration-ultra-quick.md)
 
-**用途**: すぐに結果が欲しい、定型パターンの繰り返し
+**用途**: 30秒で即実行、最小限の設定
 
 **特徴**:
-- 1分でコピペ実行
-- 5つのパターン収録（Git/Docker/テスト/セキュリティ/フレームワーク）
-- トラブルシューティング充実
+- 30秒でコピペ実行
+- 基本版とパターン特化版
+- 最小限の構成
 
 ---
 
-### 3. 構造化プロンプト（上級者向け）
+### 3. パターン別テンプレート
+
+**ファイル**: [templates/video-integration-quick-reference.md](templates/video-integration-quick-reference.md)
+
+**用途**: 用途別の最適化されたテンプレート
+
+**特徴**:
+- 5つのパターン収録（Git/Docker/テスト/セキュリティ/フレームワーク）
+- トラブルシューティング充実
+- カスタマイズガイド付き
+
+---
+
+### 4. 構造化プロンプト（上級者向け）
 
 **ファイル**: [templates/video-integration-structured-prompt.json](templates/video-integration-structured-prompt.json)
 
