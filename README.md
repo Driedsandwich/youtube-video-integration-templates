@@ -62,6 +62,14 @@ MIT License - 自由に使用・改変可能
 
 ---
 
+## 👤 Author
+
+**Main Author**: [Driedsandwich](https://github.com/Driedsandwich)  
+**Created with**: [Cursor](https://cursor.com) - AI駆動開発エディタ  
+**AI Model**: Claude Sonnet 4.5
+
+---
+
 ## 🔗 関連
 
 - [元プロジェクト（PIMS）](https://github.com/Driedsandwich/aidd-integration-system)
